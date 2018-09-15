@@ -1,6 +1,6 @@
 {
   "name": "wenodejs",
-  "version": "1.0.111",
+  "version": "0.9.1",
   "description": "WeYouMe blockchain nodejs client library",
   "author": "Lopu",
   "license": "BSD-3-Clause",
@@ -21,9 +21,9 @@
   },
   "scripts": {
     "test": "make ci-test",
-		"prepublishOnly": "make all",
-		"push" : "./scripts/push.sh",
-		"pull" : "./scripts/pull.sh"
+    "prepublishOnly": "make all",
+    "push": "./scripts/push.sh",
+    "pull": "./scripts/pull.sh"
   },
   "keywords": [
     "blockchain",

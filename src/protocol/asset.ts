@@ -107,7 +107,7 @@ export class Asset {
      */
     public getPrecision(): number {
         switch (this.symbol) {
-            case 'TME':
+						case 'TME':
             case 'TSD':
                 return 3
             case 'SCORE':
