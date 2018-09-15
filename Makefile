@@ -4,13 +4,15 @@ PATH  := ./node_modules/.bin:$(PATH)
 
 SRC_FILES := $(shell find src -name '*.ts')
 
+$(shell mkdir -p dist)
+
 all: lib bundle docs
 
 lib: $(SRC_FILES) node_modules
 	tsc -p tsconfig.json --outDir lib && \
 	VERSION="$$(node -p 'require("./package.json").version')"; \
-	echo "module.exports = '$${VERSION}';" > lib/version.js
-	touch lib
+	echo "module.exports = '$${VERSION}';" > lib/version.js \
+	touch lib \
 
 dist/%.js: lib
 	browserify $(filter-out $<,$^) --debug --full-paths \
