@@ -48,14 +48,14 @@ import {copy, retryingFetch, waitForEvent} from './utils'
 export const VERSION = packageVersion
 
 /**
- * Main Ezchain id.
+ * Main Chain id.
  */
-export const DEFAULT_CHAIN_ID = Buffer.from('0000000000000000000000000000000000000000000000000000000000000000', 'hex')
+export const DEFAULT_CHAIN_ID = Buffer.from('79276aea5d4877d9a25892eaa01b0adf019d3e5cb12a97478df3298ccdd01673', 'hex')
 
 /**
- * Main Ezchain address prefix.
+ * Main Chain address prefix.
  */
-export const DEFAULT_ADDRESS_PREFIX = 'STM'
+export const DEFAULT_ADDRESS_PREFIX = 'TWYM'
 
 interface RPCRequest {
     /**
@@ -112,12 +112,12 @@ interface PendingRequest {
  */
 export interface ClientOptions {
     /**
-     * Ezchain id. Defaults to main WeYouMe Network:
+     * Chain id. Defaults to main WeYouMe Network:
      * `0000000000000000000000000000000000000000000000000000000000000000`
      */
     chainId?: string
     /**
-     * Ezchain address prefix. Defaults to main WeYouMe Network:
+     * Chain address prefix. Defaults to main WeYouMe Network:
      * `STM`
      */
     addressPrefix?: string
@@ -157,7 +157,7 @@ export class Client {
             opts = copy(options)
             opts.agent = options.agent
         }
-        opts.addressPrefix = 'STX'
+        opts.addressPrefix = 'TWYM'
         opts.chainId = '79276aea5d4877d9a25892eaa01b0adf019d3e5cb12a97478df3298ccdd01673'
         return new Client('https://testnet.WeYouMe.io', opts)
     }
@@ -168,7 +168,7 @@ export class Client {
     public readonly options: ClientOptions
 
     /**
-     * Address to Ezchain RPC server, *read-only*.
+     * Address to Chain RPC server, *read-only*.
      */
     public readonly address: string
 
@@ -202,7 +202,7 @@ export class Client {
     private backoff: typeof defaultBackoff
 
     /**
-     * @param address The address to the Ezchain RPC server, e.g. `https://api.WeYouMe.io`.
+     * @param address The address to the Chain RPC server, e.g. `https://api.WeYouMe.io`.
      * @param options Client options.
      */
     constructor(address: string, options: ClientOptions = {}) {
