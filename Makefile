@@ -11,7 +11,7 @@ all: lib bundle docs
 lib: $(SRC_FILES) node_modules
 	tsc -p tsconfig.json --outDir lib && \
 	VERSION="$$(node -p 'require("./package.json").version')"; \
-	echo "module.exports = '$${VERSION}';" > lib/version.js \
+	echo "module.exports = '$${VERSION}';" > lib/version.js ; \
 	touch lib \
 
 dist/%.js: lib
