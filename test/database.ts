@@ -24,7 +24,7 @@ describe('database api', function() {
             'total_pow', 'num_pow_witnesses', 'virtual_supply', 'current_supply',
             'confidential_supply', 'current_TSD_supply', 'confidential_TSD_supply',
             'totalTMEfundForSCORE', 'totalSCORE', 'total_reward_fund_TME',
-            'total_SCOREreward2', 'pending_rewarded_SCORE', 'pending_rewarded_SCOREvalueInTME',
+            'totalSCOREreward2', 'pending_rewarded_SCORE', 'pending_rewarded_SCOREvalueInTME',
             'TSD_interest_rate', 'TSD_print_rate', 'maximum_block_size', 'current_aslot',
             'recent_slots_filled', 'participation_count', 'last_irreversible_block_num',
             'vote_power_reserve_rate', 'current_reserve_ratio', 'average_block_size',

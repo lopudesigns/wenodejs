@@ -166,7 +166,7 @@ export interface DynamicGlobalProperties {
     /**
      * The running total of REWARD^2.
      */
-    total_SCOREreward2: string
+    totalSCOREreward2: string
     pending_rewarded_SCORE: Asset | string
     pending_rewarded_SCOREvalueInTME: Asset | string
     /**
