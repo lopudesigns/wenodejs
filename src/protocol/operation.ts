@@ -784,7 +784,7 @@ export interface TransferToSavingsOperation extends Operation {
  * pre-fund new accounts with SCORE.
  * (A.k.a. Powering Up)
  */
-export interface TransferToSCOREOperation extends Operation {
+export interface transferTMEtoSCOREfundOperation extends Operation {
     0: 'transferTMEtoSCOREfund' // 3
     1: {
         from: string // account_name_type
